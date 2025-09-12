@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://crx06ywr32osc"]
+
+[ext_resource type="Script" uid="uid://8yofopm50u6b" path="res://hitscan_weapon.gd" id="1_kg4cf"]
+[ext_resource type="PackedScene" uid="uid://daf1odih5w8h7" path="res://Weapons/SMG.glb" id="2_duimc"]
+
+[node name="HitscanWeapon" type="Node3D"]
+script = ExtResource("1_kg4cf")
+
+[node name="CooldownTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="SMG" parent="." instance=ExtResource("2_duimc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.35, -1)
+
+[node name="SMG2" parent="." instance=ExtResource("2_duimc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, -0.35, -1)
